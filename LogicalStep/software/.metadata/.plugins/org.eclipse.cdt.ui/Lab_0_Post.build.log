@@ -1,0 +1,9 @@
+15:30:52 **** Incremental Build of configuration Nios II for project Lab_0_Post ****
+make all 
+Info: Building ../Lab_0_Post_bsp/
+C:/Software/Altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_0_Post_bsp/
+[BSP build complete]
+[Lab_0_Post build complete]
+
+15:30:53 Build Finished (took 1s.490ms)
+

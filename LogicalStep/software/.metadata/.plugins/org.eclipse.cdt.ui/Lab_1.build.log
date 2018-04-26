@@ -1,0 +1,26 @@
+15:09:37 **** Incremental Build of configuration Nios II for project Lab_1 ****
+make all 
+Info: Building ../Lab_1_bsp/
+C:/Software/Altera/15.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab_1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab_1_bsp//HAL/inc -I../Lab_1_bsp/ -I../Lab_1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED -DALTERA_AVALON_JTAG_UART_SMALL    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:155:9: warning: format '%d' expects argument of type 'int', but argument 4 has type 'alt_u32' [-Wformat=]
+         printf("%d,%d,%d,%d,%d\n",i,i>>1,BG_task,IORD(EGM_BASE,4),IORD(EGM_BASE,5));
+         ^
+hello_world.c:155:9: warning: format '%d' expects argument of type 'int', but argument 4 has type 'alt_u32' [-Wformat=]
+hello_world.c:157:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Linking Lab_1.elf
+nios2-elf-g++  -T'../Lab_1_bsp//linker.x' -msys-crt0='../Lab_1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab_1_bsp/   -Wl,-Map=Lab_1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o Lab_1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Lab_1.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x1001140 --timestamp 1516998019 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name QD1 --quartus_project_dir "C:/Users/j56cao/MTE-325/LogicalStep" --jdi ../..//output_files/LogicalStep_top.jdi --sopcinfo C:/Users/j56cao/MTE-325/LogicalStep/software/Lab_1_bsp/../../QD1.sopcinfo
+Info: (Lab_1.elf) 69 KBytes program size (code + initialized data).
+Info:             8119 KBytes free for stack + heap.
+Info: Creating Lab_1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab_1.elf >Lab_1.objdump
+[Lab_1 build complete]
+
+15:09:41 Build Finished (took 3s.45ms)
+
